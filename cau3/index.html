@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đếm Cặp Số Có Tổng Chia Hết Cho K</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .input-group {
+            margin-bottom: 15px;
+        }
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .input-group input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Đếm Cặp Số Có Tổng Chia Hết Cho K</h1>
+        <div class="input-group">
+            <label for="arrayInput">Nhập các phần tử mảng (ngăn cách bằng dấu phẩy):</label>
+            <input type="text" id="arrayInput" placeholder="Ví dụ: 1,2,3,4,5,6">
+        </div>
+        <div class="input-group">
+            <label for="kInput">Nhập số nguyên dương k:</label>
+            <input type="number" id="kInput" min="1" placeholder="Ví dụ: 5">
+        </div>
+        <button onclick="countPairs()">Đếm Cặp</button>
+        <div class="result" id="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

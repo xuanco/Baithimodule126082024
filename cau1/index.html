@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Mảng Số Nguyên</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        input, button {
+            margin: 5px;
+        }
+        #result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Quản lý Mảng Số Nguyên</h1>
+    <form id="numberForm">
+        <label for="numberInput">Nhập số nguyên:</label>
+        <input type="number" id="numberInput" required>
+        <button type="submit">Thêm vào mảng</button>
+    </form>
+    <button id="findMultiples">Tìm bội chung của 3 và 5</button>
+    <div id="result">
+        <h2>Mảng Số Nguyên:</h2>
+        <p id="arrayDisplay">Chưa có số nào trong mảng.</p>
+        <h2>Các số là bội chung của 3 và 5:</h2>
+        <p id="multiplesDisplay">Chưa có số nào là bội chung của 3 và 5.</p>
+        <h2>Tổng của các số là bội chung của 3 và 5:</h2>
+        <p id="sumDisplay">0</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

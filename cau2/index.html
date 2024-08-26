@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Làm Tròn Điểm</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+        }
+        input, button {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+        }
+        .result {
+            margin-top: 10px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Làm Tròn Điểm</h1>
+        <form id="scoreForm">
+            <label for="score">Nhập Điểm:</label>
+            <input type="number" id="score" min="0" max="100" required>
+            <button type="submit">Làm Tròn Điểm</button>
+        </form>
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        function lamTronDiem(diem) {
+            if (diem < 48) {
+                return diem;
+            }
+
+            let soBo5KeTiep = Math.ceil(diem / 5) * 5;
+
+            if (soBo5KeTiep - diem < 3) {
+                if (soBo5KeTiep >= 50) {
+                    return soBo5KeTiep;
+                }
+            }
+
+            return diem;
+        }
+
+        document.getElementById('scoreForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const diemNhap = document.getElementById('score').value;
+            const diem = parseInt(diemNhap, 10);
+            const diemLamTron = lamTronDiem(diem);
+            document.getElementById('result').textContent = `Điểm Sau Khi Làm Tròn: ${diemLamTron}`;
+        });
+    </script>
+</body>
+</html>
